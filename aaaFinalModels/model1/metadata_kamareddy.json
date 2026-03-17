@@ -1,0 +1,63 @@
+{
+  "district": "Kamareddy",
+  "training_rows": 61,
+  "test_rows": 28,
+  "train_years": [
+    "2020-21",
+    "2021-22"
+  ],
+  "test_year": "2022-23",
+  "target": "yield_per_acre_proxy",
+  "filters": {
+    "dq_weather_missing": false,
+    "dq_weather_incomplete_filtered": true,
+    "yield_gt_0": true
+  },
+  "features": {
+    "numeric": [
+      "rain_total_mm",
+      "rainy_days_total",
+      "hum_min_avg",
+      "hum_max_avg",
+      "rain_intensity",
+      "humid_range",
+      "rain_anom_mm",
+      "rain_dev_pct",
+      "avg_mandals_reporting",
+      "days_covered",
+      "months_covered"
+    ],
+    "categorical": [
+      "district",
+      "crop_name",
+      "season_norm"
+    ]
+  },
+  "xgb_params": {
+    "max_depth": 8,
+    "learning_rate": 0.05,
+    "n_estimators": 1000,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8
+  },
+  "train_metrics": {
+    "rmse": 0.0009339668996498962,
+    "mae": 0.0007518645763229758,
+    "r2": 0.9999999901000941
+  },
+  "test_metrics": {
+    "rmse": 3.9370053268424803,
+    "mae": 2.058208185620097,
+    "r2": 0.7701807237303334
+  },
+  "env_versions": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.22631-SP0",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "sklearn": "1.4.1.post1",
+    "xgboost": "3.2.0",
+    "joblib": "1.4.2"
+  },
+  "timestamp_utc": "2026-03-05T16:03:26.353356+00:00"
+}

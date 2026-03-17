@@ -1,0 +1,47 @@
+﻿======================================================================
+INSPECTING: validated_price_model.pkl
+======================================================================
+Top-level type: XGBRegressor
+Is a direct estimator/pipeline
+n_features_in_: 9
+feature_names (9): [np.str_('amcname'), np.str_('commname'), np.str_('arrivals'), np.str_('minimum'), np.str_('maximum'), np.str_('district'), np.str_('year'), np.str_('month'), np.str_('day')]
+
+======================================================================
+INSPECTING: market_lstm_autoencoder.h5
+======================================================================
+tensorflow NOT installed - trying keras directly...
+Neither tensorflow nor keras installed.
+Cannot inspect .h5 model without one of these libraries.
+
+File size: 888,680 bytes (867.9 KB)
+
+HDF5 top-level keys: ['model_weights', 'optimizer_weights']
+  model_weights/ (8 children)
+    input_1/ (0 children)
+    lstm/ (1 children)
+      lstm/ (1 children)
+    lstm_1/ (1 children)
+      lstm_1/ (1 children)
+    lstm_2/ (1 children)
+      lstm_2/ (1 children)
+    lstm_3/ (1 children)
+      lstm_3/ (1 children)
+    repeat_vector/ (0 children)
+    time_distributed/ (1 children)
+      time_distributed/ (2 children)
+    top_level_model_weights/ (0 children)
+  optimizer_weights/ (2 children)
+    Adam/ (2 children)
+      m/ (5 children)
+      v/ (5 children)
+    iteration:0: shape=(), dtype=int64
+
+Model class: Functional
+Layers:
+  InputLayer: input_1
+  LSTM: lstm, units=64, activation=relu, return_sequences=True
+  LSTM: lstm_1, units=32, activation=relu, return_sequences=False
+  RepeatVector: repeat_vector
+  LSTM: lstm_2, units=32, activation=relu, return_sequences=True
+  LSTM: lstm_3, units=64, activation=relu, return_sequences=True
+  TimeDistributed: time_distributed

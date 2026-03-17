@@ -1,0 +1,8 @@
+﻿Type: XGBRegressor
+n_features_in_: 9
+feature_names: [np.str_('amcname'), np.str_('commname'), np.str_('arrivals'), np.str_('minimum'), np.str_('maximum'), np.str_('district'), np.str_('year'), np.str_('month'), np.str_('day')]
+n_estimators: 300
+max_depth: 8
+learning_rate: 0.05
+objective: reg:squarederror
+booster: None

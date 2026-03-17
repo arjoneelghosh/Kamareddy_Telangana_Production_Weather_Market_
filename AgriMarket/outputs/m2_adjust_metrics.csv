@@ -1,0 +1,2 @@
+model,alpha,train_rows,test_rows,resid_train_r2,resid_train_rmse,resid_train_mae,resid_test_r2,resid_test_rmse,resid_test_mae,final_train_r2,final_train_rmse,final_train_mae,final_test_r2,final_test_rmse,final_test_mae
+ridgecv,10.0,123,98,0.3563422435258189,709.3296832814553,525.4839954091609,-0.254387470543765,753.0425284911864,530.149191940202,0.46856080379731646,709.3296832814553,525.4839954091609,0.1394513200082922,753.0425284911864,530.149191940202

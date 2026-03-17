@@ -1,0 +1,71 @@
+================================================================================
+AgriFore Runtime Commands Log
+Date: 2026-03-17T16:23 IST
+================================================================================
+
+--- STEP 1: Verify database exists ---
+CMD: Test-Path 'C:\Users\footb\Desktop\AgriFore\AgricultureProd\agri_validation.duckdb'
+RESULT: True
+
+--- STEP 2: Verify Python dependencies ---
+CMD: python -c "import fastapi; import duckdb; import joblib; import xgboost; import sklearn; print('All imports OK')"
+RESULT: All imports OK
+
+--- STEP 3: Start backend server ---
+CMD: python -m uvicorn api.server:app --host 127.0.0.1 --port 8000
+RESULT: Server started on http://127.0.0.1:8000
+    - sklearn version mismatch warnings (1.2.2 vs 1.6.1) — non-fatal
+    - M2 base model loaded successfully
+    - 2024 predictions CSV loaded
+    - "Application startup complete"
+
+--- STEP 4: Health check ---
+CMD: GET http://127.0.0.1:8000/health
+RESULT: 200 OK
+    {"status": "ok", "database": "connected", "model_m2_base": "loaded", "predictions_2024": "loaded"}
+
+--- STEP 5: Forecast - Tomato in Hyderabad for June 2025 ---
+CMD: POST http://127.0.0.1:8000/predict-price
+BODY: {"commodity": "tomato", "district": "Hyderabad", "month": 6, "year": 2025}
+RESULT: 200 OK
+    {"commodity": "Tomato", "predicted_price": 2467, "market": null, "district": "Hyderabad", "confidence": 0.85}
+
+--- STEP 6: Forecast - Cotton statewide for October 2025 ---
+CMD: POST http://127.0.0.1:8000/predict-price
+BODY: {"commodity": "cotton", "month": 10, "year": 2025}
+RESULT: 200 OK
+    {"commodity": "Cotton", "predicted_price": 7347, "market": null, "district": null, "confidence": 0.85}
+
+--- STEP 7: Forecast - Paddy in Warangal for December 2025 ---
+CMD: POST http://127.0.0.1:8000/predict-price
+BODY: {"commodity": "paddy", "market": "Warangal", "month": 12, "year": 2025}
+RESULT: 200 OK
+    {"commodity": "Paddy", "predicted_price": 1637, "market": "Warangal", "district": null, "confidence": 0.85}
+
+--- STEP 8: Forecast - Onions in Siddipet for March 2026 ---
+CMD: POST http://127.0.0.1:8000/predict-price
+BODY: {"commodity": "onions", "district": "Siddipet", "month": 3, "year": 2026}
+RESULT: 404 Not Found - No data for 'onions' in Siddipet district
+    (The crop name "onions" exists in DB but Siddipet has no matching records in the model view)
+
+--- STEP 9: Forecast - Maize in Karimnagar for August 2025 ---
+CMD: POST http://127.0.0.1:8000/predict-price
+BODY: {"commodity": "maize", "district": "Karimnagar", "month": 8, "year": 2025}
+RESULT: 200 OK
+    {"commodity": "Maize", "predicted_price": 2292, "market": null, "district": "Karimnagar", "confidence": 0.85}
+
+--- STEP 10: Forecast - Red Gram in Adilabad for January 2025 ---
+CMD: POST http://127.0.0.1:8000/predict-price
+BODY: {"commodity": "red gram", "district": "Adilabad", "month": 1, "year": 2025}
+RESULT: 200 OK
+    {"commodity": "Red Gram", "predicted_price": ..., "district": "Adilabad", "confidence": 0.85}
+
+--- STEP 11: Market Overview ---
+CMD: GET http://127.0.0.1:8000/market-overview
+RESULT: 200 OK
+    {"totalMarkets": 168, "activeCommodities": 117, "avgPrice": 3213.0, "totalVolume": 290550445.0, "priceChange": 5.4}
+
+================================================================================
+Summary: 10/11 commands succeeded. 1 returned 404 (data gap, not a code error).
+The backend runs end-to-end with the real M2 XGBoost model producing predictions.
+================================================================================

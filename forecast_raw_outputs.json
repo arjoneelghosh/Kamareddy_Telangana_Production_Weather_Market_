@@ -1,0 +1,74 @@
+[
+  [
+    "HEALTH CHECK",
+    200,
+    {
+      "status": "ok",
+      "database": "connected",
+      "model_m2_base": "loaded",
+      "predictions_2024": "loaded"
+    }
+  ],
+  [
+    "Tomato/Hyderabad/Jun-2025",
+    200,
+    {
+      "commodity": "Tomato",
+      "predicted_price": 2467,
+      "market": null,
+      "district": "Hyderabad",
+      "confidence": 0.85
+    }
+  ],
+  [
+    "Cotton/Statewide/Oct-2025",
+    200,
+    {
+      "commodity": "Cotton",
+      "predicted_price": 7347,
+      "market": null,
+      "district": null,
+      "confidence": 0.85
+    }
+  ],
+  [
+    "Paddy/Warangal/Dec-2025",
+    200,
+    {
+      "commodity": "Paddy",
+      "predicted_price": 1637,
+      "market": "Warangal",
+      "district": null,
+      "confidence": 0.85
+    }
+  ],
+  [
+    "Onions/Siddipet/Mar-2026",
+    404,
+    {
+      "detail": "No data available for commodity 'onions'"
+    }
+  ],
+  [
+    "Maize/Karimnagar/Aug-2025",
+    200,
+    {
+      "commodity": "Maize",
+      "predicted_price": 2292,
+      "market": null,
+      "district": "Karimnagar",
+      "confidence": 0.85
+    }
+  ],
+  [
+    "MARKET OVERVIEW",
+    200,
+    {
+      "totalMarkets": 168,
+      "activeCommodities": 117,
+      "avgPrice": 3213.0,
+      "totalVolume": 290550445.0,
+      "priceChange": 5.4
+    }
+  ]
+]

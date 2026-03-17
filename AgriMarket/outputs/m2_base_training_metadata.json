@@ -1,0 +1,32 @@
+{
+  "db_path": "C:\\Users\\footb\\Desktop\\AgriFore\\AgricultureProd\\agri_validation.duckdb",
+  "train_cutoff": "2023-12-01",
+  "test_range": [
+    "2024-01-01",
+    "2024-12-01"
+  ],
+  "features": [
+    "arrivals_sum",
+    "n_days",
+    "rain_sum_mm",
+    "rainy_days",
+    "hum_min_avg",
+    "hum_max_avg",
+    "avg_mandals_reporting",
+    "month_num",
+    "month_sin",
+    "month_cos",
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_6",
+    "lag_12",
+    "roll_mean_3",
+    "roll_mean_6",
+    "district",
+    "amc",
+    "crop_name",
+    "season_norm"
+  ],
+  "model_name": "xgboost"
+}

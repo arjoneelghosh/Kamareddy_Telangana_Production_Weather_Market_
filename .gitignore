@@ -1,0 +1,61 @@
+# Data files (raw and intermediate, excluding DuckDB as it uses LFS)
+*.csv
+!m2_base_metrics.csv
+!m2_adjust_metrics.csv
+!model_selection_recommendations.csv
+!ablation_global_summary.csv
+
+# Large Model Files
+*.joblib
+!model1_rf.joblib
+*.pkl
+!m2_base_model.pkl
+!district_model_kamareddy.pkl
+*.h5
+
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.venv/
+venv/
+env/
+ENV/
+
+# Frontend (Node/Next.js) Caches
+node_modules/
+.next/
+out/
+.vercel
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs and Env vars
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

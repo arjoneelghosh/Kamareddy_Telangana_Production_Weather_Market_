@@ -1,0 +1,36 @@
+{
+  "training_rows": 1605,
+  "test_rows": 781,
+  "feature_columns_used": [
+    "rain_total_mm",
+    "rainy_days_total",
+    "hum_min_avg",
+    "hum_max_avg",
+    "avg_mandals_reporting",
+    "days_covered",
+    "months_covered",
+    "district",
+    "crop_name",
+    "season_norm"
+  ],
+  "target": "yield_per_acre_proxy",
+  "filter_rules": [
+    "dq_weather_missing == False",
+    "dq_weather_incomplete == False",
+    "yield_per_acre_proxy not null",
+    "yield_per_acre_proxy > 0",
+    "train years: 2020-21, 2021-22",
+    "test year: 2022-23"
+  ],
+  "train_metrics": {
+    "rmse": 1.7931836218473498,
+    "mae": 0.929920703485706,
+    "r2": 0.9622736762284286
+  },
+  "test_metrics": {
+    "rmse": 5.429683389297845,
+    "mae": 3.184885114195181,
+    "r2": 0.4460476438119775
+  },
+  "timestamp_utc": "2026-03-08T12:35:26.439395+00:00"
+}

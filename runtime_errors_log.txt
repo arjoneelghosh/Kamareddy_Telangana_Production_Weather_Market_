@@ -1,0 +1,32 @@
+================================================================================
+AgriFore Runtime Errors Log
+Date: 2026-03-17T16:23 IST
+================================================================================
+
+--- WARNING (non-fatal): sklearn version mismatch ---
+When:   Server startup / model loading
+Detail: Trying to unpickle estimator SimpleImputer from version 1.2.2
+        when using version 1.6.1.
+        Same warning for OneHotEncoder and Pipeline.
+Impact: Non-fatal. The model loaded and produced predictions successfully.
+Fix:    Pin scikit-learn==1.2.2 in requirements.txt or re-train and re-save
+        the model with scikit-learn 1.6.1 to eliminate warnings.
+
+--- ERROR: 404 for Onions in Siddipet ---
+When:   POST /predict-price {"commodity": "onions", "district": "Siddipet", "month": 3, "year": 2026}
+Detail: {"detail": "No data available for commodity 'onions'"}
+Impact: This is a data-gap issue, not a code bug. The commodity "onions"
+        exists in the database (t_market_monthly) but no rows match in
+        v_model2_base_dataset for Siddipet district. All three fallback
+        strategies (XGBoost model, 2024 predictions CSV, DuckDB historical
+        average) returned no results for this specific combination.
+Fix:    Use a broader query (remove district filter) or pick a
+        district/commodity combination that has records in the model view.
+        "onions" without a district filter also returns 404, meaning onions
+        may not have enough data in the model view for any district.
+
+--- No other errors encountered ---
+All other endpoints returned HTTP 200 with valid JSON payloads.
+The backend server remained stable throughout testing.
+
+================================================================================

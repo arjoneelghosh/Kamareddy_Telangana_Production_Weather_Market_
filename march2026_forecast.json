@@ -1,0 +1,116 @@
+[
+  {
+    "label": "Tomato / Hyderabad",
+    "status": 200,
+    "response": {
+      "commodity": "Tomato",
+      "predicted_price": 1180,
+      "market": null,
+      "district": "Hyderabad",
+      "confidence": 0.85
+    },
+    "input": {
+      "commodity": "tomato",
+      "district": "Hyderabad",
+      "month": 3,
+      "year": 2026
+    }
+  },
+  {
+    "label": "Paddy / Warangal",
+    "status": 404,
+    "response": {
+      "detail": "No data available for commodity 'paddy'"
+    },
+    "input": {
+      "commodity": "paddy",
+      "district": "Warangal",
+      "month": 3,
+      "year": 2026
+    }
+  },
+  {
+    "label": "Cotton / Statewide",
+    "status": 200,
+    "response": {
+      "commodity": "Cotton",
+      "predicted_price": 7351,
+      "market": null,
+      "district": null,
+      "confidence": 0.85
+    },
+    "input": {
+      "commodity": "cotton",
+      "month": 3,
+      "year": 2026
+    }
+  },
+  {
+    "label": "Maize / Karimnagar",
+    "status": 200,
+    "response": {
+      "commodity": "Maize",
+      "predicted_price": 2332,
+      "market": null,
+      "district": "Karimnagar",
+      "confidence": 0.85
+    },
+    "input": {
+      "commodity": "maize",
+      "district": "Karimnagar",
+      "month": 3,
+      "year": 2026
+    }
+  },
+  {
+    "label": "Red Gram / Adilabad",
+    "status": 200,
+    "response": {
+      "commodity": "Red Gram",
+      "predicted_price": 8233,
+      "market": null,
+      "district": "Adilabad",
+      "confidence": 0.85
+    },
+    "input": {
+      "commodity": "red gram",
+      "district": "Adilabad",
+      "month": 3,
+      "year": 2026
+    }
+  },
+  {
+    "label": "Bengal Gram / Nizamabad",
+    "status": 200,
+    "response": {
+      "commodity": "Bengal Gram",
+      "predicted_price": 4486,
+      "market": null,
+      "district": "Nizamabad",
+      "confidence": 0.85
+    },
+    "input": {
+      "commodity": "bengal gram",
+      "district": "Nizamabad",
+      "month": 3,
+      "year": 2026
+    }
+  },
+  {
+    "label": "Chillies(Dry) / Khammam",
+    "status": 200,
+    "response": {
+      "commodity": "Chillies(Dry)",
+      "predicted_price": 12068,
+      "market": null,
+      "district": "Khammam",
+      "confidence": 0.85
+    },
+    "input": {
+      "commodity": "chillies(dry)",
+      "district": "Khammam",
+      "month": 3,
+      "year": 2026
+    }
+  }
+]

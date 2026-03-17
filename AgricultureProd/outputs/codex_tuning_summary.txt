@@ -1,0 +1,12 @@
+Model 1 XGBoost Tuning Summary
+
+Tries run: 8
+Best try_id: 2
+Best test_r2: 0.3117
+Best train_r2: 0.7308
+Best rmse_test: 6.0523
+Best notes: strong_reg_slightly_deeper
+Best params_json: {"scale_numeric":true,"xgb_params":{"learning_rate":0.04,"gamma":2.5,"reg_alpha":8,"min_child_weight":10,"n_estimators":800,"reg_lambda":25,"subsample":0.75,"colsample_bytree":0.75,"max_depth":4,"tree_method":"hist"}}
+
+Recommendation:
+Hybrid strongly recommended: district-specific models (or hierarchical model) are likely needed; global-only underfits domain shift.

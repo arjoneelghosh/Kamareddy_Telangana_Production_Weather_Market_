@@ -1,0 +1,211 @@
+﻿
+============================================================
+GET /health
+============================================================
+Status: 200
+{
+  "status": "ok",
+  "database": "connected",
+  "model_m2_base": "loaded",
+  "predictions_2024": "loaded"
+}
+
+============================================================
+GET /commodities
+============================================================
+Status: 200
+Items: 117
+First: {
+  "id": "ajwan",
+  "name": "Ajwan",
+  "category": "Other"
+}
+Last:  {
+  "id": "yam",
+  "name": "Yam",
+  "category": "Vegetable"
+}
+
+============================================================
+GET /markets
+============================================================
+Status: 200
+Items: 169
+First: {
+  "id": "achampet",
+  "name": "Achampet",
+  "district": "Nagarkurnool"
+}
+Last:  {
+  "id": "zaheerabad",
+  "name": "Zaheerabad",
+  "district": "Sangareddy"
+}
+
+============================================================
+GET /districts
+============================================================
+Status: 200
+Items: 30
+First: {
+  "id": "adilabad",
+  "name": "Adilabad",
+  "state": "Telangana"
+}
+Last:  {
+  "id": "yadadri_bhuvanagiri",
+  "name": "Yadadri Bhuvanagiri",
+  "state": "Telangana"
+}
+
+============================================================
+GET /market-overview
+============================================================
+Status: 200
+{
+  "totalMarkets": 168,
+  "activeCommodities": 117,
+  "avgPrice": 3213.0,
+  "totalVolume": 290550445.0,
+  "priceChange": 5.4
+}
+
+============================================================
+GET /top-commodities
+============================================================
+Status: 200
+Items: 8
+First: {
+  "name": "Paddy",
+  "price": 2260,
+  "change": 8.0,
+  "volume": 8452979
+}
+Last:  {
+  "name": "Maize",
+  "price": 2259,
+  "change": 11.8,
+  "volume": 1156903
+}
+
+============================================================
+GET /market-clusters
+============================================================
+Status: 200
+Items: 6
+First: {
+  "name": "Siddipet",
+  "markets": 12,
+  "avgPrice": 2226,
+  "region": "Siddipet, Telangana"
+}
+Last:  {
+  "name": "Rangareddy",
+  "markets": 8,
+  "avgPrice": 2697,
+  "region": "Rangareddy, Telangana"
+}
+
+============================================================
+GET /price-trends
+============================================================
+Status: 500
+ERROR: Expecting value: line 1 column 1 (char 0)
+
+============================================================
+GET /price-trends
+============================================================
+Status: 200
+Items: 99
+First: {
+  "date": "2016-05-01",
+  "Tomato": 4000.0
+}
+Last:  {
+  "date": "2024-12-01",
+  "Tomato": 1261.8751754499658
+}
+
+============================================================
+GET /seasonal-data
+============================================================
+Status: 200
+Items: 12
+First: {
+  "month": "Jan",
+  "avgPrice": 869,
+  "volume": 760078
+}
+Last:  {
+  "month": "Dec",
+  "avgPrice": 1146,
+  "volume": 951187
+}
+
+============================================================
+GET /arrival-data
+============================================================
+Status: 200
+Items: 12
+First: {
+  "month": "Jan",
+  "arrival": 760078,
+  "price": 869
+}
+Last:  {
+  "month": "Dec",
+  "arrival": 951187,
+  "price": 1146
+}
+
+============================================================
+POST /predict-price
+============================================================
+Status: 200
+{
+  "commodity": "Tomato",
+  "predicted_price": 2431,
+  "market": null,
+  "district": "Hyderabad",
+  "confidence": 0.85
+}
+
+============================================================
+POST /predict-price
+============================================================
+Status: 200
+{
+  "commodity": "Cotton",
+  "predicted_price": 6908,
+  "market": null,
+  "district": null,
+  "confidence": 0.85
+}
+
+============================================================
+POST /predict-price
+============================================================
+Status: 200
+{
+  "commodity": "Paddy",
+  "predicted_price": 1612,
+  "market": "Warangal",
+  "district": null,
+  "confidence": 0.85
+}
+
+============================================================
+POST /ask-agent
+============================================================
+Status: 200
+{
+  "answer": "Based on our analysis of Telangana market data, crop prices are influenced by seasonal supply patterns, weather conditions, and arrival volumes. Use the Price Prediction page for specific forecasts.",
+  "sources": [
+    "t_market_monthly",
+    "m2_base_model"
+  ]
+}
+
+============================================================
+ALL TESTS COMPLETE
+============================================================

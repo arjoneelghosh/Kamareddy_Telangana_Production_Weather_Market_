@@ -1,0 +1,187 @@
+﻿Table columns: ['database', 'schema', 'name', 'column_names', 'column_types', 'temporary']
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_crop_stability', 'column_names': array(['crop_name', 'min_districts_any_year', 'min_mandals_any_year'],
+      dtype=object), 'column_types': array(['VARCHAR', 'BIGINT', 'BIGINT'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_crop_year_coverage', 'column_names': array(['year_label', 'crop_name', 'district_count', 'mandal_count',
+       'production_sum'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'BIGINT', 'BIGINT', 'DOUBLE'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_district_alias', 'column_names': array(['from_key', 'to_key', 'from_name', 'to_name', 'note'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR'],
+      dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_harvest_year_rollup', 'column_names': array(['harvest_year', 'season_final', 'crop_name',
+       'total_production_value', 'total_area_acres',
+       'yield_per_acre_proxy'], dtype=object), 'column_types': array(['INTEGER', 'VARCHAR', 'VARCHAR', 'DOUBLE', 'DOUBLE', 'DOUBLE'],
+      dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_market_clean', 'column_names': array(['obs_date', 'district', 'amc', 'crop_name', 'arrivals',
+       'min_price', 'max_price', 'modal_price', 'source_file'],
+      dtype=object), 'column_types': array(['DATE', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'DOUBLE', 'DOUBLE',
+       'DOUBLE', 'DOUBLE', 'VARCHAR'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_market_monthly', 'column_names': array(['month_start', 'district', 'amc', 'crop_name', 'modal_price_mean',
+       'min_price_mean', 'max_price_mean', 'arrivals_sum', 'n_days'],
+      dtype=object), 'column_types': array(['DATE', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'DOUBLE', 'DOUBLE',
+       'DOUBLE', 'DOUBLE', 'BIGINT'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_market_raw', 'column_names': array(['obs_date', 'district', 'amc', 'crop_name', 'arrivals',
+       'modal_price', 'min_price', 'max_price', 'source_file'],
+      dtype=object), 'column_types': array(['DATE', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'DOUBLE', 'DOUBLE',
+       'DOUBLE', 'DOUBLE', 'VARCHAR'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_model1_dataset', 'column_names': array(['year_label', 'year_start', 'year_end', 'district', 'crop_name',
+       'season_norm', 'total_production_value', 'total_area_acres',
+       'yield_per_acre_proxy', 'mandal_rows_used',
+       'mandals_used_distinct', 'rain_total_mm', 'rainy_days_total',
+       'hum_min_avg', 'hum_max_avg', 'avg_mandals_reporting',
+       'days_covered', 'months_covered', 'expected_months',
+       'dq_weather_missing', 'dq_weather_incomplete'], dtype=object), 'column_types': array(['VARCHAR', 'INTEGER', 'INTEGER', 'VARCHAR', 'VARCHAR', 'VARCHAR',
+       'DOUBLE', 'DOUBLE', 'DOUBLE', 'BIGINT', 'BIGINT', 'DOUBLE',
+       'DOUBLE', 'DOUBLE', 'DOUBLE', 'DOUBLE', 'BIGINT', 'BIGINT',
+       'INTEGER', 'BOOLEAN', 'BOOLEAN'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_model1_join_coverage', 'column_names': array(['year_label', 'season_norm', 'rows_labels', 'rows_joined',
+       'join_pct'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'BIGINT', 'BIGINT', 'DOUBLE'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_model1_labels_district', 'column_names': array(['year_label', 'year_start', 'year_end', 'district_key', 'district',
+       'crop_name', 'season_norm', 'total_production_value',
+       'total_area_acres', 'yield_per_acre_proxy', 'mandal_rows_used',
+       'mandals_used_distinct'], dtype=object), 'column_types': array(['VARCHAR', 'INTEGER', 'INTEGER', 'VARCHAR', 'VARCHAR', 'VARCHAR',
+       'VARCHAR', 'DOUBLE', 'DOUBLE', 'DOUBLE', 'BIGINT', 'BIGINT'],
+      dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_model1_missing_districts', 'column_names': array(['year_label', 'season_norm', 'district', 'weight',
+       'crop_rows_missing'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'VARCHAR', 'HUGEINT', 'BIGINT'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_prod_missing_weather', 'column_names': array(['year_label', 'season_norm', 'prod_district',
+       'prod_district_key_raw', 'prod_district_key_canon',
+       'prod_row_count', 'weather_district', 'weather_district_key_raw',
+       'weather_district_key_canon', 'weather_row_count'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'BIGINT',
+       'VARCHAR', 'VARCHAR', 'VARCHAR', 'BIGINT'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_season_coverage', 'column_names': array(['year_label', 'season_final', 'row_count', 'distinct_crop_count',
+       'missing_season_rows'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'BIGINT', 'BIGINT', 'HUGEINT'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_weather_district_day', 'column_names': array(['year', 'district', 'obs_date', 'rain_mm_med', 'hum_min_avg',
+       'hum_max_avg', 'mandals_reporting'], dtype=object), 'column_types': array(['INTEGER', 'VARCHAR', 'DATE', 'DOUBLE', 'DOUBLE', 'DOUBLE',
+       'BIGINT'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_weather_district_month', 'column_names': array(['year', 'district', 'yyyy', 'mm', 'rain_sum_mm', 'rainy_days',
+       'hum_min_avg', 'hum_max_avg', 'avg_mandals_reporting'],
+      dtype=object), 'column_types': array(['INTEGER', 'VARCHAR', 'BIGINT', 'BIGINT', 'DOUBLE', 'BIGINT',
+       'DOUBLE', 'DOUBLE', 'DOUBLE'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_weather_district_season', 'column_names': array(['year_label', 'year_start', 'year_end', 'district', 'season_norm',
+       'rain_total_mm', 'rainy_days_total', 'hum_min_avg', 'hum_max_avg',
+       'avg_mandals_reporting', 'days_covered', 'months_covered'],
+      dtype=object), 'column_types': array(['VARCHAR', 'BIGINT', 'BIGINT', 'VARCHAR', 'VARCHAR', 'DOUBLE',
+       'HUGEINT', 'DOUBLE', 'DOUBLE', 'DOUBLE', 'BIGINT', 'BIGINT'],
+      dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_weather_missing_prod', 'column_names': array(['year_label', 'season_norm', 'prod_district',
+       'prod_district_key_raw', 'prod_district_key_canon',
+       'prod_row_count', 'weather_district', 'weather_district_key_raw',
+       'weather_district_key_canon', 'weather_row_count'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'BIGINT',
+       'VARCHAR', 'VARCHAR', 'VARCHAR', 'BIGINT'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_yield_join_check', 'column_names': array(['year_label', 'year_start', 'year_end', 'district', 'mandal',
+       'crop_name', 'season_final', 'production_value', 'area_acres',
+       'prod_per_acre', 'prod_source_file', 'area_source_file'],
+      dtype=object), 'column_types': array(['VARCHAR', 'INTEGER', 'INTEGER', 'VARCHAR', 'VARCHAR', 'VARCHAR',
+       'VARCHAR', 'DOUBLE', 'DOUBLE', 'DOUBLE', 'VARCHAR', 'VARCHAR'],
+      dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_yield_outlier_flags', 'column_names': array(['year_label', 'crop_name', 'district', 'mandal', 'season_final',
+       'year_start', 'year_end', 'production_value', 'area_acres',
+       'prod_per_acre', 'log_yield', 'prod_source_file',
+       'area_source_file', 'median_log_yield', 'mad_log_yield',
+       'area_p01', 'yield_p99', 'robust_z', 'dq_tiny_area',
+       'dq_outlier_yield', 'dq_outlier_any'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'INTEGER',
+       'INTEGER', 'DOUBLE', 'DOUBLE', 'DOUBLE', 'DOUBLE', 'VARCHAR',
+       'VARCHAR', 'DOUBLE', 'DOUBLE', 'DOUBLE', 'DOUBLE', 'DOUBLE',
+       'BOOLEAN', 'BOOLEAN', 'BOOLEAN'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 't_yield_seasonal', 'column_names': array(['year_label', 'district', 'crop_name', 'crop_key', 'season_norm',
+       'yield_per_acre_proxy', 'dq_weather_incomplete'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'DOUBLE',
+       'BOOLEAN'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'tg_raw', 'column_names': array(['year', 'district', 'division', 'mandal', 'crop_type', 'crop_name',
+       'area_production', 'value', 'note', 'season', 'source_file'],
+      dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR',
+       'VARCHAR', 'DOUBLE', 'VARCHAR', 'VARCHAR', 'VARCHAR'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'v_area_real', 'column_names': array(['year_label', 'year_start', 'year_end', 'district', 'mandal',
+       'crop_name', 'season_norm', 'division_norm', 'crop_type_norm',
+       'source_file', 'value'], dtype=object), 'column_types': array(['VARCHAR', 'INTEGER', 'INTEGER', 'VARCHAR', 'VARCHAR', 'VARCHAR',
+       'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'DOUBLE'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'v_model2_adjust_dataset', 'column_names': array(['month_start', 'district', 'amc', 'crop_name', 'season_norm',
+       'year_label', 'year_start', 'year_end', 'modal_price_mean',
+       'min_price_mean', 'max_price_mean', 'arrivals_sum', 'n_days',
+       'rain_sum_mm', 'rainy_days', 'hum_min_avg', 'hum_max_avg',
+       'avg_mandals_reporting', 'yield_signal', 'dq_weather_incomplete'],
+      dtype=object), 'column_types': array(['DATE', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR',
+       'BIGINT', 'BIGINT', 'DOUBLE', 'DOUBLE', 'DOUBLE', 'DOUBLE',
+       'BIGINT', 'DOUBLE', 'BIGINT', 'DOUBLE', 'DOUBLE', 'DOUBLE',
+       'DOUBLE', 'BOOLEAN'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'v_model2_base_dataset', 'column_names': array(['month_start', 'district', 'amc', 'crop_name', 'crop_key',
+       'season_norm', 'year_label', 'year_start', 'year_end',
+       'modal_price_mean', 'min_price_mean', 'max_price_mean',
+       'arrivals_sum', 'n_days', 'rain_sum_mm', 'rainy_days',
+       'hum_min_avg', 'hum_max_avg', 'avg_mandals_reporting'],
+      dtype=object), 'column_types': array(['DATE', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR',
+       'VARCHAR', 'BIGINT', 'BIGINT', 'DOUBLE', 'DOUBLE', 'DOUBLE',
+       'DOUBLE', 'BIGINT', 'DOUBLE', 'BIGINT', 'DOUBLE', 'DOUBLE',
+       'DOUBLE'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'v_month_to_season', 'column_names': array(['month_start', 'season_norm', 'year_start', 'year_end',
+       'year_label'], dtype=object), 'column_types': array(['DATE', 'VARCHAR', 'BIGINT', 'BIGINT', 'VARCHAR'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'v_prod_district_keys', 'column_names': array(['year_label', 'season_norm', 'district', 'district_key_raw',
+       'district_key_canon', 'row_count'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'BIGINT'],
+      dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'v_prod_real', 'column_names': array(['year_label', 'year_start', 'year_end', 'district', 'mandal',
+       'crop_name', 'season_norm', 'division_norm', 'crop_type_norm',
+       'source_file', 'value'], dtype=object), 'column_types': array(['VARCHAR', 'INTEGER', 'INTEGER', 'VARCHAR', 'VARCHAR', 'VARCHAR',
+       'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'DOUBLE'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'v_weather_clean_std', 'column_names': array(['year', 'district', 'mandal', 'obs_date', 'rain_mm', 'hum_min',
+       'hum_max', 'rows_per_key', 'source_file'], dtype=object), 'column_types': array(['INTEGER', 'VARCHAR', 'VARCHAR', 'DATE', 'DOUBLE', 'DOUBLE',
+       'DOUBLE', 'BIGINT', 'VARCHAR'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'v_weather_district_keys', 'column_names': array(['year_label', 'season_norm', 'district', 'district_key_raw',
+       'district_key_canon', 'row_count'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'BIGINT'],
+      dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'v_weather_season_canon', 'column_names': array(['year_label', 'year_start', 'year_end', 'district', 'season_norm',
+       'rain_total_mm', 'rainy_days_total', 'hum_min_avg', 'hum_max_avg',
+       'avg_mandals_reporting', 'days_covered', 'months_covered',
+       'district_key_raw', 'district_key'], dtype=object), 'column_types': array(['VARCHAR', 'BIGINT', 'BIGINT', 'VARCHAR', 'VARCHAR', 'DOUBLE',
+       'HUGEINT', 'DOUBLE', 'DOUBLE', 'DOUBLE', 'BIGINT', 'BIGINT',
+       'VARCHAR', 'VARCHAR'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'v_weather_season_canon_uniq', 'column_names': array(['year_label', 'season_norm', 'district_key', 'district_rep',
+       'rain_total_mm', 'rainy_days_total', 'hum_min_avg', 'hum_max_avg',
+       'avg_mandals_reporting', 'days_covered', 'months_covered',
+       'weather_rows_collapsed'], dtype=object), 'column_types': array(['VARCHAR', 'VARCHAR', 'VARCHAR', 'VARCHAR', 'DOUBLE', 'DOUBLE',
+       'DOUBLE', 'DOUBLE', 'DOUBLE', 'BIGINT', 'BIGINT', 'BIGINT'],
+      dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'weather_clean', 'column_names': array(['year', 'district', 'mandal', 'obs_date', 'rain_mm', 'hum_min',
+       'hum_max', 'rows_per_key', 'source_file'], dtype=object), 'column_types': array(['INTEGER', 'VARCHAR', 'VARCHAR', 'DATE', 'DOUBLE', 'DOUBLE',
+       'DOUBLE', 'BIGINT', 'VARCHAR'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'weather_raw', 'column_names': array(['year', 'district', 'mandal', 'obs_date', 'rain_mm', 'hum_min',
+       'hum_max', 'source_file'], dtype=object), 'column_types': array(['INTEGER', 'VARCHAR', 'VARCHAR', 'DATE', 'DOUBLE', 'DOUBLE',
+       'DOUBLE', 'VARCHAR'], dtype=object), 'temporary': False}
+{'database': 'agri_validation', 'schema': 'main', 'name': 'weather_stage', 'column_names': array(['year', 'district', 'mandal', 'obs_date', 'rain_mm', 'hum_min',
+       'hum_max', 'source_file'], dtype=object), 'column_types': array(['INTEGER', 'VARCHAR', 'VARCHAR', 'DATE', 'DOUBLE', 'DOUBLE',
+       'DOUBLE', 'VARCHAR'], dtype=object), 'temporary': False}
+
+--- VIEWS ---
+v_area_real
+v_model2_adjust_dataset
+v_model2_base_dataset
+v_month_to_season
+v_prod_district_keys
+v_prod_real
+v_weather_clean_std
+v_weather_district_keys
+v_weather_season_canon
+v_weather_season_canon_uniq
+
+--- v_market_monthly columns ---
+  VIEW NOT FOUND
+
+--- v_model2_base_dataset columns ---
+  month_start                    DATE
+  district                       VARCHAR
+  amc                            VARCHAR
+  crop_name                      VARCHAR
+  crop_key                       VARCHAR
+  season_norm                    VARCHAR
+  year_label                     VARCHAR
+  year_start                     BIGINT
+  year_end                       BIGINT
+  modal_price_mean               DOUBLE
+  min_price_mean                 DOUBLE
+  max_price_mean                 DOUBLE
+  arrivals_sum                   DOUBLE
+  n_days                         BIGINT
+  rain_sum_mm                    DOUBLE
+  rainy_days                     BIGINT
+  hum_min_avg                    DOUBLE
+  hum_max_avg                    DOUBLE
+  avg_mandals_reporting          DOUBLE
+
+--- v_market_monthly sample ---
+  NO DATA
